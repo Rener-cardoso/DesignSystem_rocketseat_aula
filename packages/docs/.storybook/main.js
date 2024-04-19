@@ -28,5 +28,12 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/DesignSystem_rocketseat_aula/'
+    }
+
+    return config
+  }
 };
 export default config;
